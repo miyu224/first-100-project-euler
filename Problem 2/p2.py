@@ -1,10 +1,10 @@
-FOUR_MILLION = 4000000
+TARGET = 4000000
 
 def compute():
 	ans = 0
 	x = 1
 	y = 2
-	while x <= FOUR_MILLION:
+	while x <= TARGET:
 		if x % 2 == 0:
 			ans += x
 		x, y = y, x + y

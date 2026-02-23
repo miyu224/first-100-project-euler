@@ -1,0 +1,4 @@
+All answers of my solved problems from Project Euler
+
+1. Problem 1 - Multiples of 3 or 5: 233168
+2. Problem 2 - Even Fibonacci Number: 4613732 
