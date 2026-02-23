@@ -8,3 +8,4 @@ I commit my solution of [Project Euler](https://projecteuler.net) to this reposi
 
 ## 🏃 Ongoing
 
+- [] **Problem 2: Even Fibonacci Numbers** —  *23/02/26*
