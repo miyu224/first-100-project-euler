@@ -1,5 +1,5 @@
 #
-# Tool for get problem url, generate md file, update README.md to track progress
+# Tool for get problem url, problem content, generate md file, update README.md to track progress
 #
 
 import requests
@@ -11,6 +11,14 @@ from datetime import datetime
 URL = "https://projecteuler.net"
 SCRAPE_URL = "https://math.berkeley.edu/~elafandi/euler"  # Only first 58 problems now
 READ_ME_FILE_PATH = "./README.md"
+
+PYTHON_SOLUTION_TEMPLATE = """def compute():
+  ans = 0
+  return str(ans)
+
+if __name__ == "__main__":
+	print(compute())
+"""
 
 def normalize_content(content):
     # Remove \( and \) delimiters completely
@@ -49,7 +57,7 @@ def update_ongoing_readme(problem_title):
 def init_problem(problem_title, number, problem_number, problem_name, problem_content):
     folder_path = make_folder(problem_number)
     make_file(folder_path, problem_name, problem_content, "md")
-    make_file(folder_path, f"p{number}", "", "py")
+    make_file(folder_path, f"p{number}", PYTHON_SOLUTION_TEMPLATE, "py")
     update_ongoing_readme(problem_title)
 
 def get_problem():
