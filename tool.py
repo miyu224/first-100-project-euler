@@ -40,7 +40,7 @@ def update_ongoing_readme(problem_title):
     now = datetime.now()
     today = now.strftime("%d/%m/%y")
     content = f"""## 🏃 Ongoing
-- [] **{problem_title}** — *{today}*
+- [ ] **{problem_title}** — *{today}*
     """
     
     with open(READ_ME_FILE_PATH, "a", encoding="utf-8") as f:   # “a” = append mode
