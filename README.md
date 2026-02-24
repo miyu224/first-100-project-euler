@@ -7,5 +7,5 @@ I commit my solution of [Project Euler](https://projecteuler.net) to this reposi
 - [x] **Problem 2: Even Fibonacci Numbers** — *23/02/26*
 
 ## 🏃 Ongoing
-- [] **Problem 3: Largest Prime Factor** — *24/02/26*
+- [ ] **Problem 3: Largest Prime Factor** — *24/02/26*
     
