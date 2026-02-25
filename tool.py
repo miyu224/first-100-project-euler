@@ -22,11 +22,14 @@ if __name__ == "__main__":
 	print(compute())
 """
 
+
 def normalize_content(content):
     # Remove \( and \) delimiters completely
     content = re.sub(r"\\\(|\\\)", "", content)
     # Remove \[ and \] delimiters completely
     content = re.sub(r"\\\[|\\\]", "", content)
+    # Change /time into x
+    content = re.sub(r"\\times", "x", content)
     return content
 
 
@@ -117,26 +120,30 @@ def init_problem(problem_title, number, problem_number, problem_name, problem_co
     make_file(folder_path, f"p{number}", PYTHON_SOLUTION_TEMPLATE, "py")
     update_ongoing_readme(problem_title)
 
+
 def get_problem_detail(number):
-  content_url = f"{SCRAPE_URL}/p{number}"
+    content_url = f"{SCRAPE_URL}/p{number}"
 
-  response = requests.get(content_url)
-  soup = BeautifulSoup(response.text, "html.parser")
-  problem_title = soup.find("h1").get_text()
+    response = requests.get(content_url)
+    soup = BeautifulSoup(response.text, "html.parser")
+    problem_title = soup.find("h1").get_text()
 
-  problem_content = soup.find(class_="problem_content").get_text()
+    problem_content = soup.find(class_="problem_content").get_text()
 
-  problem_number = problem_title.split(":")[0].strip()
-  problem_name = problem_title.split(":")[1].strip()
+    problem_number = problem_title.split(":")[0].strip()
+    problem_name = problem_title.split(":")[1].strip()
 
-  return {problem_title, problem_content, problem_number, problem_name}
+    return problem_title, problem_content, problem_number, problem_name
+
 
 def get_problem():
     number = int(input("Enter the problem number: "))
     problem_url = f"{URL}/problem={number}"
 
     if number <= 58:
-        problem_title, problem_content, problem_number, problem_name = get_problem_detail(number)
+        problem_title, problem_content, problem_number, problem_name = (
+            get_problem_detail(number)
+        )
 
         normalized_content = normalize_content(problem_content)
 
@@ -154,7 +161,7 @@ def get_problem():
 def answer():
     number = int(input("Enter the problem number you want to submit: "))
 
-    problem_title, problem_content, problem_number, problem_name = get_problem_detail(number)
+    problem_title = get_problem_detail(number)[0]
 
     user_answer = input(f"Enter your answer of {problem_title} ✌(-‿-)✌: ")
     actual_answer = ANSWERS[number]
