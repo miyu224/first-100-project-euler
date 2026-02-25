@@ -101,7 +101,7 @@ def remove_ongoing_section():
 def update_answer_file(number, problem_title, user_answer):
     content = f"{number}. {problem_title}: {user_answer}"
     with open(ANSWER_FILE_PATH, "a", encoding="utf-8") as f:  # “a” = append mode
-        f.write(f"\n{content}\n")
+        f.write(f"{content}\n")
 
 
 def answer_problem(user_answer, problem_title, number):
@@ -110,7 +110,7 @@ def answer_problem(user_answer, problem_title, number):
     update_answer_file(number, problem_title, user_answer)
 
     print(
-        f"Congratulations! You are correct for answering {user_answer} for {problem_title}"
+        f"Congratulations (っ´ω`c)♡! You are correct for answering {user_answer} for {problem_title}"
     )
 
 
