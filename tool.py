@@ -60,8 +60,7 @@ def get_today():
 def update_ongoing_readme(problem_title):
     today = get_today()
     content = f"""## 🏃 Ongoing
-- [ ] **{problem_title}** — *{today}*
-    """
+- [ ] **{problem_title}** — *{today}*"""
 
     with open(READ_ME_FILE_PATH, "a", encoding="utf-8") as f:  # “a” = append mode
         f.write(f"{content}\n")
@@ -148,8 +147,7 @@ def get_problem():
         normalized_content = normalize_content(problem_content)
 
         problem_file_content = f"""[{problem_name}]({problem_url})
-{normalized_content}
-        """
+{normalized_content}"""
 
         init_problem(
             problem_title, number, problem_number, problem_name, problem_file_content
