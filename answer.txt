@@ -5,3 +5,4 @@ All answers of my solved problems from Project Euler
 3. Problem 3 - Largest Prime Factor: 6857
 4. Problem 4: Largest Palindrome Product: 906609
 5. Problem 5: Smallest Multiple: 232792560
+6. Problem 6: Sum Square Difference: 25164150
