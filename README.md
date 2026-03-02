@@ -9,3 +9,5 @@ I commit my solution of [Project Euler](https://projecteuler.net) to this reposi
 - [x] **Problem 4: Largest Palindrome Product** — *25/02/26*
 - [x] **Problem 5: Smallest Multiple** — *26/02/26*
 - [x] **Problem 6: Sum Square Difference** — *28/02/26*
+## 🏃 Ongoing
+- [ ] **Problem 7: 10001st Prime** — *02/03/26*
