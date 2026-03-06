@@ -7,3 +7,4 @@ All answers of my solved problems from Project Euler
 5. Problem 5: Smallest Multiple: 232792560
 6. Problem 6: Sum Square Difference: 25164150
 7. Problem 7: 10001st Prime: 104743
+8. Problem 8: Largest Product in a Series: 23514624000
