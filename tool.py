@@ -132,6 +132,8 @@ def get_problem_detail(number):
     problem_number = problem_title.split(":")[0].strip()
     problem_name = problem_title.split(":")[1].strip()
 
+    print("Berkele url if needed: ", content_url)
+
     return problem_title, problem_content, problem_number, problem_name
 
 
