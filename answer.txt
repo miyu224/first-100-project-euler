@@ -9,3 +9,4 @@ All answers of my solved problems from Project Euler
 7. Problem 7: 10001st Prime: 104743
 8. Problem 8: Largest Product in a Series: 23514624000
 9. Problem 9: Special Pythagorean Triplet: 31875000
+10. Problem 10: Summation of Primes: 142913828922
